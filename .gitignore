@@ -1,8 +1,4 @@
-# MY CHNAGES
-*.p
-*.pt
-secrets.toml
-scratch*.ipynb
+
 venv*/
 .vscode*
 .vscode*/
