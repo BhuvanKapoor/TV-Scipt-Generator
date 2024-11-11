@@ -1,8 +1,3 @@
-
-<a href="https://tv-script-generation-rnn-sssingh.streamlit.app/"  target="_blank"><img src="https://img.shields.io/badge/open_app_in_streamlit-f63366?style=for-the-badge&logo=streamlit&logoColor=black" /></a>
-
-<img src="https://github.com/sssingh/tv-script-generation-rnn/blob/master/assets/title.png?raw=true width=1000 height=350"/><br><br> 
-
 # TV Script Generation APP using Recurrent Neural Network
 ***This project demonstrates how Recurrent Neural Network (RNN) model can be used to generate synthetic TV/film script***
 
@@ -18,40 +13,6 @@ Note that even though I have used Seinfeld script to train and generate the text
 - The dataset is provided as part of this repo, and it's kept in `data/Seinfeld_Scripts.txt` as a plain text 
 file.
 
-## App Details
-The `streamlit` based App is composed of two tabs, "ABOUT" and "SCRIPT WRITER".
-
-### ABOUT
-Provides objective and usage of the app.
-
-### SCRIPT WRITER
-Accepts a text prompt/seed (prime-word) and the length (number of words) of the script to be generated. corpus (TV/film script, book, etc.). "Generate" button press will kick-off the scrip generation process to generate a text snippet that'd look like if this generated text came from the original script/book. 
-
-<img src="https://github.com/sssingh/tv-script-generation-rnn/blob/master/assets/writer-1.png?raw=true"><br><br>
-<img src="https://github.com/sssingh/tv-script-generation-rnn/blob/master/assets/writer-2.png?raw=true">
-
-Note that the prime-word must be a word thats present in vocabulary of training text 
-corpus. For reference the vocabulary can be downloaded directly from the writer tab.
-
-Note that even though Seinfeld script is used to train and generate the text, any other text corpus (tv/film script, books, text corpus) can be used to re-train the model and generate the relevant text. There could be multiple use cases where the same text generation technique can be used.
-
-# Project Source
-👉 [Visit GitHub Repo](https://github.com/sssingh/tv-script-generation-rnn)
-
-## License
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
-# Contact Me
-[![email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sunil@sunilssingh.me)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/@thesssingh)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sssingh/)
-[![website](https://img.shields.io/badge/web_site-8B5BE8?style=for-the-badge&logo=ko-fi&logoColor=white)](https://sunilssingh.me)
-
-## Credits
-- Dataset used in this project is provided by [Udacity](https://www.udacity.com/)
-- Above dataset is a subset taken from Kaggle, [Seinfeld dataset](https://www.kaggle.com/thec03u5/seinfeld-chronicles#scripts.csv)
-- GRU, RNN diagrams courtesy [Daniel V. Godoy](https://github.com/dvgodoy)
-
 # Appendix
 ## Local Installation and Run
 To run the app locally...
@@ -59,11 +20,9 @@ To run the app locally...
 2. install python 3.11.0 or above
 3. execute below commands from terminal/command-prompt
 ```
-git clone https://github.com/sssingh/tv-script-generation-rnn
-cd nlp_ner_summarization_classification
+git clone https://github.com/BhuvanKapoor/tv-script-generator
 pip install jupyter
 pip install -r requirements.txt
-streamlit run src/app.py
 ```
 
 >NOTE: The model building and training code is in  `notebooks/tv_script_generation.ipynb` jupyter notebook. If you wish to change the model architecture and re-train the network then use this notebook. To train the models, it's recommended to execute the notebook one cell at a time as some steps might take a while to execute. If a GPU is available (recommended), it'll use it automatically; otherwise, training will fall back to the CPU. 
@@ -288,6 +247,3 @@ Model Trained and Saved
 We can easily see that the _fake_ generated script snippet came from the original TV script; however, it's far from perfect. Multiple characters say (somewhat) complete sentences. All sentences do not make sense, but it doesn't have to be perfect! It takes quite a while and a lot of experimentation and resources to get good results for such a complex task. We can use smaller vocabulary (and discard uncommon words) or get more data to improve outcomes. Still impressive to see how we can get a very trivial network to mimic a human-generated text up to some degree of accuracy with little effort.
 
 Experiment with different prime-word and different script lengths generates some engaging (and funny) text; give it a try!
-
-#   T V - S c i p t - G e n e r a t o r  
- 
